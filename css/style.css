@@ -1,191 +1,144 @@
-:root{
-    --text: #777;
-    --light-green: #7ed56f;
-    --light-green-bg: rgba(126, 213, 111, 0.8);
-    --medium-green: #55c57a;
-    --dark-green: #28b485;
-    --dark-green-bg: rgba(40, 180, 133, 0.8);
-}
-
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
 html {
-    font-size: 62.5%; /*1 rem = 10px*/
-}
+  font-size: 62.5%;
+  /*1 rem = 10px*/ }
 
 body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-    color: var(--text);
-    padding: 3rem;
-    box-sizing: border-box;
-}
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box; }
 
 .header {
-    height: 95vh;
-    background-image: linear-gradient(
-        to right bottom, 
-        var(--light-green-bg), 
-        var(--dark-green-bg)), 
-        url(../img/hero.jpg);
-    background-size: cover;
-    background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); /* Clockwise direction */
-}
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  /* Clockwise direction */ }
 
 .header__icons-box {
-    display: flex;
-    justify-content: space-between;
-    padding: 3.5rem 0 0 4.7rem;
-}
+  display: flex;
+  justify-content: space-between;
+  padding: 3.5rem 0 0 4.7rem; }
 
 .header__logo {
-    height: 3rem;
-}
+  height: 3rem; }
 
 .header__text-container {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
 
 .heading-primary {
-    color: #fff;
-    text-transform: uppercase;
-
-    backface-visibility: hidden; /* FIX the Animation Shaking*/
-    margin-bottom: 6rem;
-}
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* FIX the Animation Shaking*/
+  margin-bottom: 6rem; }
 
 .heading-primary--main {
-    display: block;
-    font-size: 5rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    
-    /*
+  display: block;
+  font-size: 5rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  /*
         animation-delay: 3s; animation starts after 3 seconds
         animation-iteration-count: 2;  animation is repeated twice
-    */
-}
+    */ }
 
 .heading-primary--sub {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 1.74rem;
-    animation: moveInRight 1s ease-out;
-}
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1.74rem;
+  animation: moveInRight 1s ease-out; }
 
 @keyframes moveInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-10rem);  
-    }
-
-    80% {
-        transform: translateX(1rem);
-    }
-
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
 @keyframes moveInRight {
-    0% {
-      opacity: 0;
-      transform: translateX(10rem);  
-    }
-
-    80% {
-        transform: translateX(-1rem);
-    }
-
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
 @keyframes moveInBottom {
-    0% {
-      opacity: 0;
-      transform: translateY(3rem);  
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 
 .btn:link,
 .btn:visited {
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all .2s;
-    position: relative; /* We need this for the "after" pseudo element of the button*/
-}
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  /* We need this for the "after" pseudo element of the button*/ }
 
 .btn:hover {
-    transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.17);
-}
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.17); }
 
 .btn:active {
-    transform: translateY(-0.1rem);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.17);
-}
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.17); }
 
 .btn--white {
-    background-color: #fff;
-    color: var(--text);
-}
+  background-color: #fff;
+  color: #777; }
 
 .btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
 
 .btn--white::after {
-    background-color: #fff;
-}
+  background-color: #fff; }
 
 .btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0; }
 
 .btn--animated {
-    animation: moveInBottom 0.5s ease-out 0.75s;
-    animation-fill-mode: backwards; /*apply the animation 0% styles before it starts*/
-}
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+  /*apply the animation 0% styles before it starts*/ }

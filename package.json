@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Landing page for natours",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RochaDiego04/Natours.git"
+  },
+  "author": "RochaDiego04",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RochaDiego04/Natours/issues"
+  },
+  "homepage": "https://github.com/RochaDiego04/Natours#readme",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
