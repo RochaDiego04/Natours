@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as v;
+
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: v.$text;
+}
+
+.heading-primary {
+    color: v.$white;
+    text-transform: uppercase;
+  
+    backface-visibility: hidden; /* FIX the Animation Shaking*/
+    margin-bottom: 6rem;
+  
+    &--main {
+      display: block;
+      font-size: 5rem;
+      font-weight: 400;
+      letter-spacing: 3.5rem;
+  
+      animation-name: moveInLeft;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+  
+      /*
+      animation-delay: 3s; animation starts after 3 seconds
+      animation-iteration-count: 2;  animation is repeated twice
+      */
+    }
+  
+    &--sub {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1.74rem;
+      animation: moveInRight 1s ease-out;
+    }
+}

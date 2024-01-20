@@ -1,0 +1,57 @@
+@use "../abstracts/variables" as v;
+
+.btn {
+    &:link,
+    &:visited {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1rem 4rem;
+      display: inline-block;
+      border-radius: 10rem;
+      transition: all 0.2s;
+      position: relative; /* We need this for the "after" pseudo element of the button*/
+    }
+  
+    &:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem rgba(v.$black, 0.17);
+      
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+  
+    &:active {
+      transform: translateY(-0.1rem);
+      box-shadow: 0 0.5rem 1rem rgba(v.$black, 0.17);
+    }
+  
+    &--white {
+      background-color: v.$white;
+      color: v.$text;
+      
+      &::after {
+        background-color: v.$white;
+      }
+    }
+  
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 10rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.4s;
+    }
+  
+    &--animated {
+      animation: moveInBottom 0.5s ease-out 0.75s;
+      animation-fill-mode: backwards; /*apply the animation 0% styles before it starts*/
+    }
+  }

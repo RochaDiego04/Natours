@@ -1,52 +1,69 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 html {
-  font-size: 62.5%;
-  /*1 rem = 10px*/ }
+  font-size: 62.5%; /*1 rem = 10px*/
+}
+
+body {
+  padding: 3rem;
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
-  box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-  /* Clockwise direction */ }
-
-.header__icons-box {
-  display: flex;
-  justify-content: space-between;
-  padding: 3.5rem 0 0 4.7rem; }
-
-.header__logo {
-  height: 3rem; }
-
-.header__text-container {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
+}
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-  backface-visibility: hidden;
-  /* FIX the Animation Shaking*/
-  margin-bottom: 6rem; }
-
+  backface-visibility: hidden; /* FIX the Animation Shaking*/
+  margin-bottom: 6rem;
+}
 .heading-primary--main {
   display: block;
   font-size: 5rem;
@@ -56,47 +73,19 @@ body {
   animation-duration: 1s;
   animation-timing-function: ease-out;
   /*
-        animation-delay: 3s; animation starts after 3 seconds
-        animation-iteration-count: 2;  animation is repeated twice
-    */ }
-
+  animation-delay: 3s; animation starts after 3 seconds
+  animation-iteration-count: 2;  animation is repeated twice
+  */
+}
 .heading-primary--sub {
   display: block;
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 1.74rem;
-  animation: moveInRight 1s ease-out; }
+  animation: moveInRight 1s ease-out;
+}
 
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  80% {
-    transform: translateX(1rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  80% {
-    transform: translateX(-1rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
-
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   font-size: 1.1rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -104,21 +93,27 @@ body {
   display: inline-block;
   border-radius: 10rem;
   transition: all 0.2s;
-  position: relative;
-  /* We need this for the "after" pseudo element of the button*/ }
-
+  position: relative; /* We need this for the "after" pseudo element of the button*/
+}
 .btn:hover {
   transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.17); }
-
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.17);
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
 .btn:active {
   transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.17); }
-
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.17);
+}
 .btn--white {
   background-color: #fff;
-  color: #777; }
-
+  color: #777;
+}
+.btn--white::after {
+  background-color: #fff;
+}
 .btn::after {
   content: "";
   display: inline-block;
@@ -129,16 +124,34 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all 0.4s; }
-
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
-
+  transition: all 0.4s;
+}
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
-  /*apply the animation 0% styles before it starts*/ }
+  animation-fill-mode: backwards; /*apply the animation 0% styles before it starts*/
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); /* Clockwise direction */
+}
+.header__icons-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 3.5rem 0 0 4.7rem;
+}
+.header__logo {
+  height: 3rem;
+}
+.header__text-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

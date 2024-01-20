@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as v;
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(v.$light-green, 0.8),
+        rgba(v.$dark-green, 0.8)
+      ),
+      url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); /* Clockwise direction */
+  
+    &__icons-box {
+      display: flex;
+      justify-content: space-between;
+      padding: 3.5rem 0 0 4.7rem;
+    }
+  
+    &__logo {
+      height: 3rem;
+    }
+  
+    &__text-container {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  }

@@ -4,7 +4,7 @@
   "description": "Landing page for natours",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "sass --watch sass/main.scss:css/style.css"
   },
   "repository": {
     "type": "git",
@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/RochaDiego04/Natours/issues"
   },
-  "homepage": "https://github.com/RochaDiego04/Natours#readme",
-  "devDependencies": {
-    "node-sass": "^9.0.0"
-  }
+  "homepage": "https://github.com/RochaDiego04/Natours#readme"
 }
