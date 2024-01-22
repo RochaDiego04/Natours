@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as v;
+
+.section-about {
+    background-color: v.$color-grey-light-1;
+    padding: 25rem 4rem;
+    margin-top: -20vh;
+}
+
+.about-grid {
+    margin: 5rem auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: v.$grid-max-width;
+}
+
+.about-grid--images {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
