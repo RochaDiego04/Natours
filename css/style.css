@@ -171,6 +171,22 @@ body {
   transform: skewY(7deg);
 }
 
+/*TOURS SECTION*/
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 40rem 4rem 50rem 4rem;
+  margin-top: -20vh;
+}
+
+.tours-grid {
+  margin: 5rem auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 2rem;
+  column-gap: 5rem;
+  max-width: 115rem;
+}
+
 .btn:link, .btn:visited {
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -272,6 +288,9 @@ body {
 
 .feature-box {
   display: inline-block;
+  width: 23.3rem;
+  max-width: 23.3rem;
+  min-width: 23.3rem;
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
   padding: 2.5rem;
@@ -289,6 +308,37 @@ body {
 }
 .feature-box:hover {
   transform: scale(1.03) translateY(-1.5rem);
+}
+
+.card {
+  perspective: 150rem; /* This defines how dramatic the effect of rotation will be */
+  -moz-perspective: 150rem;
+  position: relative;
+}
+.card__side {
+  background-color: orangered;
+  color: #fff;
+  font-size: 2rem;
+  height: 50rem;
+  transition: all 0.8s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden; /* Hides the back part of an element, fix the animation bug*/
+}
+.card__side--front {
+  background-color: orangered;
+}
+.card__side--back {
+  background-color: green;
+  transform: rotateY(180deg);
+}
+.card:hover .card__side--front {
+  transform: rotateY(180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(0);
 }
 
 .header {

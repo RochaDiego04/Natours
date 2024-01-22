@@ -2,6 +2,9 @@
 
 .feature-box {
     display: inline-block;
+    width: 23.3rem;
+    max-width: 23.3rem;
+    min-width: 23.3rem;
     background-color: rgba(v.$white, 0.8);
     font-size: 1.5rem;
     padding: 2.5rem;

@@ -49,3 +49,19 @@
 
     transform: skewY(7deg);
 }
+
+/*TOURS SECTION*/
+.section-tours {
+    background-color: v.$color-grey-light-1;
+    padding: 40rem 4rem 50rem 4rem;
+    margin-top: -20vh;
+}
+
+.tours-grid {
+    margin: 5rem auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+    column-gap: 5rem;
+    max-width: v.$small-max-width;
+}
