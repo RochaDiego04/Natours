@@ -36,6 +36,15 @@
         background-color: v.$white;
       }
     }
+
+    &--green {
+      background-color: v.$medium-green;
+      color: v.$white;
+      
+      &::after {
+        background-color: v.$medium-green;
+      }
+    }
   
     &::after {
       content: "";

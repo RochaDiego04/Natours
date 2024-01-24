@@ -131,6 +131,14 @@ body {
   margin-bottom: 8rem;
 }
 
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
+.u-margin-top-huge {
+  margin-top: 10rem;
+}
+
 /*ABOUT SECTION*/
 .section-about {
   background-color: #f7f7f7;
@@ -174,7 +182,7 @@ body {
 /*TOURS SECTION*/
 .section-tours {
   background-color: #f7f7f7;
-  padding: 40rem 4rem 50rem 4rem;
+  padding: 40rem 4rem 15rem 4rem;
   margin-top: -20vh;
 }
 
@@ -215,6 +223,13 @@ body {
 }
 .btn--white::after {
   background-color: #fff;
+}
+.btn--green {
+  background-color: #55c57a;
+  color: #fff;
+}
+.btn--green::after {
+  background-color: #55c57a;
 }
 .btn::after {
   content: "";
@@ -311,7 +326,6 @@ body {
 }
 
 .card {
-  min-width: 35rem;
   perspective: 150rem; /* This defines how dramatic the effect of rotation will be */
   -moz-perspective: 150rem; /* This is for firefox compatibility*/
   position: relative;
@@ -326,7 +340,7 @@ body {
   left: 0;
   width: 100%;
   backface-visibility: hidden; /* Hides the back part of an element, fix the animation bug */
-  border-radius: 3px;
+  border-radius: 5px;
   overflow: hidden; /* Image don't overflow the card */
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
@@ -338,6 +352,12 @@ body {
 }
 .card__side--back-1 {
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+.card__side--back-2 {
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+.card__side--back-3 {
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
 }
 .card:hover .card__side--front {
   transform: rotateY(-180deg);
@@ -356,10 +376,10 @@ body {
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg);
 }
 .card__picture--2 {
-  background-image: url(../img/nat-5.jpg);
+  background-image: linear-gradient(to right bottom, #7ed56f, #55c57a), url(../img/nat-6.jpg);
 }
 .card__picture--3 {
-  background-image: url(../img/nat-5.jpg);
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg);
 }
 .card__heading {
   font-size: 2.8rem;
@@ -379,6 +399,12 @@ body {
 }
 .card__heading-span--1 {
   background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+}
+.card__heading-span--2 {
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(85, 197, 122, 0.85));
+}
+.card__heading-span--3 {
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85));
 }
 .card__details {
   padding: 3rem;

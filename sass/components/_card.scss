@@ -3,7 +3,6 @@
 .card {
 
     // FUNCTIONALITY
-    min-width: 35rem;
     perspective: 150rem; /* This defines how dramatic the effect of rotation will be */
     -moz-perspective: 150rem; /* This is for firefox compatibility*/
     position: relative;
@@ -19,7 +18,7 @@
         left: 0;
         width: 100%;
         backface-visibility: hidden; /* Hides the back part of an element, fix the animation bug */
-        border-radius: 3px;
+        border-radius: 5px;
         overflow: hidden; /* Image don't overflow the card */
         box-shadow: 0 1.5rem 4rem rgba(v.$black, .15);
 
@@ -32,6 +31,12 @@
 
             &-1 {
                 background-image: linear-gradient(to right bottom, v.$light-orange, v.$medium-orange);
+            }
+            &-2 {
+                background-image: linear-gradient(to right bottom, v.$light-green, v.$dark-green);
+            }
+            &-3 {
+                background-image: linear-gradient(to right bottom, v.$light-indigo-blue, v.$medium-indigo-blue);
             }
         }
     }
@@ -57,10 +62,12 @@
             url(../img/nat-5.jpg);
         }
         &--2 {
-            background-image: url(../img/nat-5.jpg);
+            background-image: linear-gradient(to right bottom, v.$light-green, v.$medium-green),
+            url(../img/nat-6.jpg);
         }
         &--3 {
-            background-image: url(../img/nat-5.jpg);
+            background-image: linear-gradient(to right bottom, v.$light-indigo-blue, v.$medium-indigo-blue),
+            url(../img/nat-7.jpg);
         }
     }
 
@@ -85,6 +92,16 @@
             background-image: linear-gradient(to right bottom,
              rgba(v.$light-orange, 0.85), 
              rgba(v.$medium-orange, 0.85));
+        }
+        &--2 {
+            background-image: linear-gradient(to right bottom,
+             rgba(v.$light-green, 0.85), 
+             rgba(v.$medium-green, 0.85));
+        }
+        &--3 {
+            background-image: linear-gradient(to right bottom,
+             rgba(v.$light-indigo-blue, 0.85), 
+             rgba(v.$medium-indigo-blue, 0.85));
         }
     }
 
