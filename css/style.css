@@ -311,14 +311,15 @@ body {
 }
 
 .card {
+  min-width: 35rem;
   perspective: 150rem; /* This defines how dramatic the effect of rotation will be */
   -moz-perspective: 150rem; /* This is for firefox compatibility*/
   position: relative;
-  height: 50rem;
+  height: 52rem;
 }
 .card__side {
+  height: 52rem;
   font-size: 2rem;
-  height: 50rem;
   transition: all 0.8s ease;
   position: absolute;
   top: 0;
@@ -347,7 +348,7 @@ body {
 .card__picture {
   background-size: cover;
   height: 23rem;
-  background-blend-mode: screen;
+  background-blend-mode: screen; /* Mix the linear gradient and the bg image */
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
@@ -378,6 +379,42 @@ body {
 }
 .card__heading-span--1 {
   background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+}
+.card__details {
+  padding: 3rem;
+}
+.card__details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+.card__details ul li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.card__cta {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.card__price-box {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 8rem;
+}
+.card__price-only {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.card__price-value {
+  font-size: 6rem;
+  font-weight: 100;
 }
 
 .header {

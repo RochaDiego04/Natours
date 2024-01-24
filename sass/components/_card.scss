@@ -3,15 +3,16 @@
 .card {
 
     // FUNCTIONALITY
+    min-width: 35rem;
     perspective: 150rem; /* This defines how dramatic the effect of rotation will be */
     -moz-perspective: 150rem; /* This is for firefox compatibility*/
     position: relative;
-    height: 50rem;
+    height: 52rem;
 
     &__side {
+        height: 52rem;
         font-size: 2rem;
 
-        height: 50rem;
         transition: all .8s ease;
         position: absolute;
         top: 0;
@@ -47,7 +48,7 @@
     &__picture {
         background-size: cover;
         height: 23rem;
-        background-blend-mode: screen;
+        background-blend-mode: screen; /* Mix the linear gradient and the bg image */
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
@@ -85,5 +86,50 @@
              rgba(v.$light-orange, 0.85), 
              rgba(v.$medium-orange, 0.85));
         }
+    }
+
+    &__details {
+        padding: 3rem;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid v.$color-grey-light-2;
+                }
+            }
+        }
+    }
+
+    // BACK SIDE STYLING
+    &__cta {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__price-box {
+        text-align: center;
+        color: v.$white;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
     }
 }
