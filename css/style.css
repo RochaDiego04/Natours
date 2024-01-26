@@ -195,6 +195,12 @@ body {
   max-width: 115rem;
 }
 
+/*STORIES SECTION*/
+.section-stories {
+  padding: 15rem 0;
+  background-color: #f7f7f7;
+}
+
 .btn:link, .btn:visited {
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -441,6 +447,34 @@ body {
 .card__price-value {
   font-size: 6rem;
   font-weight: 100;
+}
+
+.story {
+  width: 75%;
+  margin: 5rem auto 0;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 6rem 6rem 6rem 9rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg);
+}
+.story__shape {
+  width: 15rem;
+  height: 15rem;
+  float: left; /* All the other elements will float around the shape
+   Just works if element has width and height */
+  --webkit-shape-outside: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  --webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  transform: translateX(-3rem) skewX(12deg);
+}
+.story__image {
+  height: 100%;
+}
+.story__text {
+  transform: skewX(12deg);
 }
 
 .header {
