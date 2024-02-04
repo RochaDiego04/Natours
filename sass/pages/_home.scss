@@ -76,14 +76,16 @@
 /*BOOKING SECTION*/
 
 .section-book {
-    padding: 15rem 0;
+    padding: 15rem 4rem;
     background-image: linear-gradient(to right bottom, v.$light-green, v.$dark-green);
 }
 
 .book {
+    max-width: v.$medium-max-width;
+    margin: 0 auto;
     background-image: linear-gradient(105deg,
-                                     rgba(v.$white, 0.9) 0%, 
-                                     rgba(v.$white, 0.9) 50%,
+                                     rgba(v.$white, 0.8) 0%, 
+                                     rgba(v.$white, 0.8) 50%,
                                      transparent 50%),
                                      url(../img/nat-10.jpg);
     background-size: cover;
