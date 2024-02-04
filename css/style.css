@@ -34,6 +34,16 @@
     transform: translateY(0);
   }
 }
+@keyframes radioBtnScaleUpDissapear {
+  0% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scaleX(1.4) scaleY(1.4);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scaleX(1) scaleY(1);
+  }
+}
 *,
 *::after,
 *::before {
@@ -587,8 +597,15 @@ body {
   width: 49%;
   display: inline-block;
 }
-.form__radio-input {
-  display: none;
+.form__radio-group:focus-within .form__radio-button {
+  transform: translateY(-0.3rem);
+  transition: all 0.4s;
+}
+.form__radio-group:focus-within .form__radio-button::before {
+  animation: radioBtnScaleUpDissapear 0.8s ease-out;
+}
+.form__radio-input { /* Hide the original radio buttons*/
+  appearance: none;
 }
 .form__radio-label {
   font-size: 1.6rem;
@@ -619,6 +636,20 @@ body {
   background-color: #55c57a;
   opacity: 0;
   transition: opacity 0.2s;
+}
+.form__radio-button::before {
+  content: "";
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  position: absolute;
+  backface-visibility: hidden; /* FIX ANIMATION SHAKING */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #28b485;
+  opacity: 0;
 }
 .form__radio-input:checked + .form__radio-label .form__radio-button::after {
   opacity: 100%;

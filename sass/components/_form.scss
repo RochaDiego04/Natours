@@ -54,8 +54,16 @@
         display: inline-block;
     }
 
-    &__radio-input {
-        display: none;
+    &__radio-group:focus-within &__radio-button{
+        transform: translateY(-0.3rem);
+        transition: all 0.4s;
+        &::before {
+            animation: radioBtnScaleUpDissapear .8s ease-out;
+        }
+    }
+
+    &__radio-input { /* Hide the original radio buttons*/
+        appearance: none;
     }
 
     &__radio-label {
@@ -88,6 +96,21 @@
             background-color: v.$medium-green;
             opacity: 0;
             transition: opacity .2s;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            height: 1.5rem;
+            width: 1.5rem;
+            border-radius: 50%;
+            position: absolute;
+            backface-visibility: hidden; /* FIX ANIMATION SHAKING */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: v.$dark-green;
+            opacity: 0;
         }
     }
 
