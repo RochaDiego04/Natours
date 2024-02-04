@@ -1,6 +1,7 @@
 @use "../abstracts/variables" as v;
 
 .btn {
+    &, /*Apply to the buttons too, not only anchors with "link" and "visited" properties*/
     &:link,
     &:visited {
       font-size: v.$default-font-size;
@@ -11,9 +12,15 @@
       border-radius: 10rem;
       transition: all 0.2s;
       position: relative; /* We need this for the "after" pseudo element of the button*/
+    
+      // Change for the <button> element
+      border: none;
+      cursor: pointer;
     }
   
-    &:hover {
+    &:hover,
+    &:focus{
+      outline: none;
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 2rem rgba(v.$black, 0.17);
       
