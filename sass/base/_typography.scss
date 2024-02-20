@@ -1,43 +1,51 @@
 @use "../abstracts/variables" as v;
-
+@use "../abstracts/mixins" as m;
 
 body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-    color: v.$text;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: v.$text;
 }
 
 .heading-primary {
-    color: v.$white;
-    text-transform: uppercase;
-  
-    backface-visibility: hidden; /* FIX the Animation Shaking*/
-    margin-bottom: 6rem;
-  
-    &--main {
-      display: block;
-      font-size: 5rem;
-      font-weight: 400;
-      letter-spacing: 3.5rem;
-  
-      animation-name: moveInLeft;
-      animation-duration: 1s;
-      animation-timing-function: ease-out;
-  
-      /*
+  color: v.$white;
+  text-transform: uppercase;
+
+  backface-visibility: hidden; /* FIX the Animation Shaking*/
+  margin-bottom: 6rem;
+
+  &--main {
+    display: block;
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    /*
       animation-delay: 3s; animation starts after 3 seconds
       animation-iteration-count: 2;  animation is repeated twice
       */
+    @include m.respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 4rem;
     }
-  
-    &--sub {
-      display: block;
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: 1.74rem;
-      animation: moveInRight 1s ease-out;
+  }
+
+  &--sub {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    animation: moveInRight 1s ease-out;
+
+    @include m.respond(phone) {
+      letter-spacing: 0.5rem;
     }
+  }
 }
 
 .heading-secondary {
@@ -50,11 +58,19 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;
-  transition: all .2s;
+  transition: all 0.2s;
+
+  @include m.respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include m.respond(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
-    text-shadow: .5rem 1rem 2rem rgba(v.$black, .2);
+    text-shadow: 0.5rem 1rem 2rem rgba(v.$black, 0.2);
   }
 }
 
@@ -66,7 +82,7 @@ body {
 
 .paragraph {
   font-size: v.$default-font-size;
-  
+
   &:not(:last-child) {
     margin-bottom: 3rem;
   }

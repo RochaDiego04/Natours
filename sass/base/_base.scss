@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
 
 *,
 *::after,
@@ -10,9 +11,21 @@
 
 html {
   font-size: 62.5%; /*1 rem = 10px*/
+  @include m.respond(tab-land) {
+    font-size: 56.25%; /*1 rem = 9px*/
+  }
+  @include m.respond(tab-port) {
+    font-size: 50%; /*1 rem = 8px*/
+  }
+  @include m.respond(big-desktop) {
+    font-size: 75%; /*1 rem = 12px, 12/16*/
+  }
 }
 
 body {
   padding: 3rem;
   box-sizing: border-box;
+  @include m.respond(tab-port) {
+    padding: 0;
+  }
 }

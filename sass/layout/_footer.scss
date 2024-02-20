@@ -1,72 +1,86 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
 
 .footer {
-    background-color: v.$color-grey-dark-2;
-    padding: 10rem 0;
-    font-size: 1.4rem;
-    color: v.$color-grey-light-1;
+  background-color: v.$color-grey-dark-2;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  color: v.$color-grey-light-1;
 
-    &__logo-box {
-        text-align: center;
-        margin-bottom: 8rem;
-    }
+  @include m.respond(tab-port) {
+    padding: 8rem 0;
+  }
 
-    &__logo {
-        width: 15rem;
-        height: auto;
-    }
+  &__logo-box {
+    text-align: center;
+    margin-bottom: 8rem;
+  }
 
-    &__grid-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 0 4rem;
-        gap: 16rem;
-        margin: 0 auto;
-        max-width: 110rem;
-    }
+  &__logo {
+    width: 15rem;
+    height: auto;
+  }
 
-    &__navigation {
-        display: flex;
-        justify-content: center;
-        border-top: 1px solid v.$text;
-        padding-top: 2rem;
+  &__grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 4rem;
+    gap: 16rem;
+    margin: 0 auto;
+    max-width: 110rem;
+    @include m.respond(tab-port) {
+      display: block;
     }
+  }
 
-    &__list {
-        list-style: none;
+  &__navigation {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid v.$text;
+    padding-top: 2rem;
+    @include m.respond(tab-port) {
+      margin-bottom: 6.4rem;
     }
-    
-    &__item {
-        text-align: center;
-        display: inline-block;
+  }
 
-        &:not(:last-child) {
-            margin-right: 1.5rem;
-        }
-    }
+  &__list {
+    list-style: none;
+  }
 
-    &__link {
-        &:link,
-        &:visited {
-            color: v.$color-grey-light-1;
-            background-color: v.$color-grey-dark-2;
-            text-decoration: none;
-            text-transform: uppercase;
-            display: inline-block;
-            transition: all .2s;
-        }
-        &:hover,
-        &:active {
-            color: v.$medium-green;
-            box-shadow: 0 1rem 2rem rgba(v.$black, .4);
-            transform: rotate(4deg) scale(1.3);
-        }
-    }
+  &__item {
+    text-align: center;
+    display: inline-block;
 
-    &__copyright {
-        display: flex;
-        justify-content: center;
-        border-top: 1px solid v.$text;
-        padding-top: 2rem;
+    &:not(:last-child) {
+      margin-right: 1.5rem;
     }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: v.$color-grey-light-1;
+      background-color: v.$color-grey-dark-2;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    &:hover,
+    &:active {
+      color: v.$medium-green;
+      box-shadow: 0 1rem 2rem rgba(v.$black, 0.4);
+      transform: rotate(4deg) scale(1.3);
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid v.$text;
+    padding-top: 2rem;
+    @include m.respond(tab-port) {
+      text-align: center;
+    }
+  }
 }
