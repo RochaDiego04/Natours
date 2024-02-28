@@ -193,9 +193,19 @@ body {
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important;
 }
+@media (max-width: 52.25em) {
+  .u-margin-bottom-medium {
+    margin-bottom: 3rem !important;
+  }
+}
 
 .u-margin-bottom-big {
   margin-bottom: 8rem !important;
+}
+@media (max-width: 52.25em) {
+  .u-margin-bottom-big {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .u-margin-top-big {
@@ -209,23 +219,35 @@ body {
 /*ABOUT SECTION*/
 .section-about {
   background-color: #f7f7f7;
-  padding: 40rem 4rem 30rem 4rem;
+  padding: 30rem 4rem;
   margin-top: -20vh;
 }
-
-.about-grid {
-  margin: 5rem auto 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  row-gap: 2rem;
-  column-gap: 5rem;
-  max-width: 115rem;
+@media (max-width: 75em) {
+  .section-about {
+    padding: 30rem 4rem 50rem 4rem;
+  }
 }
 
-.about-grid--images {
-  grid-column: 2/3;
-  grid-row: 1/3;
+.about-flex {
+  margin: 5rem auto 0 auto;
+  display: flex;
+  gap: 2rem;
+  max-width: 115rem;
+}
+@media (max-width: 75em) {
+  .about-flex {
+    flex-direction: column;
+  }
+}
+
+.about-flex--images {
+  width: 150rem;
+}
+@media (max-width: 75em) {
+  .about-flex--images {
+    margin: 0 auto;
+    max-width: 40rem;
+  }
 }
 
 /*FEATURES SECTION*/
@@ -235,6 +257,11 @@ body {
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -15rem;
+}
+@media (max-width: 75em) {
+  .section-features {
+    padding: 15rem 0;
+  }
 }
 
 .features-flex-container {
@@ -258,6 +285,11 @@ body {
   padding: 40rem 4rem 15rem 4rem;
   margin-top: -20vh;
 }
+@media (max-width: 75em) {
+  .section-tours {
+    padding: 35rem 4rem 10rem 4rem;
+  }
+}
 
 .tours-grid {
   margin: 5rem auto 0 auto;
@@ -267,17 +299,32 @@ body {
   column-gap: 5rem;
   max-width: 115rem;
 }
+@media (max-width: 75em) {
+  .tours-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /*STORIES SECTION*/
 .section-stories {
   position: relative;
   padding: 15rem 0;
 }
+@media (max-width: 75em) {
+  .section-stories {
+    padding: 10rem 0;
+  }
+}
 
 /*BOOKING SECTION*/
 .section-book {
   padding: 15rem 4rem;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+@media (max-width: 75em) {
+  .section-book {
+    padding: 10rem 4rem;
+  }
 }
 
 .book {
@@ -438,6 +485,12 @@ body {
   -moz-perspective: 150rem; /* This is for firefox compatibility*/
   position: relative;
   height: 52rem;
+  max-width: 35rem;
+}
+@media (max-width: 75em) {
+  .card {
+    margin: 0 auto;
+  }
 }
 .card__side {
   height: 52rem;
@@ -849,6 +902,11 @@ body {
   text-align: center;
   margin-bottom: 8rem;
 }
+@media (max-width: 52.25em) {
+  .footer__logo-box {
+    margin-bottom: 5rem;
+  }
+}
 .footer__logo {
   width: 15rem;
   height: auto;
@@ -874,7 +932,7 @@ body {
 }
 @media (max-width: 52.25em) {
   .footer__navigation {
-    margin-bottom: 6.4rem;
+    margin-bottom: 5rem;
   }
 }
 .footer__list {
@@ -959,8 +1017,8 @@ body {
 }
 @media (max-width: 37.5em) {
   .navigation__background {
-    top: 3rem;
-    right: 3rem;
+    top: 2.5rem;
+    right: 2.5rem;
   }
 }
 .navigation__nav {
