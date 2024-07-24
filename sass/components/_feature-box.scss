@@ -13,7 +13,7 @@
   box-shadow: 0 1.5rem 4rem rgba(v.$black, 0.15);
   transition: transform 0.2s;
 
-  @include m.respond(tab-land) {
+  @include m.respond(tab-port) {
     margin: 0 auto;
     width: auto;
     max-width: 40rem;
@@ -25,6 +25,9 @@
     background-image: linear-gradient(to right, v.$light-green, v.$dark-green);
     -webkit-background-clip: text;
     color: transparent;
+    @include m.respond(tab-port) {
+      margin-bottom: 0;
+    }
   }
 
   &:hover {

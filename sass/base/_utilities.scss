@@ -22,7 +22,13 @@
 
 .u-margin-top-big {
   margin-top: 8rem !important;
+  @include m.respond(tab-port) {
+    margin-top: 5rem !important;
+  }
 }
 .u-margin-top-huge {
   margin-top: 10rem !important;
+  @include m.respond(tab-port) {
+    margin-top: 7rem !important;
+  }
 }

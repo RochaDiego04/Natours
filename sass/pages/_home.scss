@@ -6,8 +6,8 @@
   background-color: v.$color-grey-light-1;
   padding: 30rem 4rem;
   margin-top: -20vh;
-  @include m.respond(tab-land) {
-    padding: 30rem 4rem 50rem 4rem;
+  @include m.respond(tab-port) {
+    padding: 20rem 4rem 30rem 4rem;
   }
 }
 
@@ -16,14 +16,14 @@
   display: flex;
   gap: 2rem;
   max-width: v.$small-max-width;
-  @include m.respond(tab-land) {
+  @include m.respond(tab-port) {
     flex-direction: column;
   }
 }
 
 .about-flex--images {
   width: 150rem;
-  @include m.respond(tab-land) {
+  @include m.respond(tab-port) {
     margin: 0 auto;
     max-width: 40rem;
   }
@@ -42,8 +42,8 @@
 
   transform: skewY(-7deg);
   margin-top: -15rem;
-  @include m.respond(tab-land) {
-    padding: 15rem 0;
+  @include m.respond(tab-port) {
+    padding: 10rem 0;
   }
 
   & > * {
@@ -60,7 +60,7 @@
   max-width: v.$medium-max-width;
   padding: 0 2.2rem;
 
-  @include m.respond(tab-land) {
+  @include m.respond(tab-port) {
     flex-direction: column;
   }
 }
@@ -70,8 +70,8 @@
   background-color: v.$color-grey-light-1;
   padding: 40rem 4rem 15rem 4rem;
   margin-top: -20vh;
-  @include m.respond(tab-land) {
-    padding: 35rem 4rem 10rem 4rem;
+  @include m.respond(tab-port) {
+    padding: 23rem 4rem 10rem 4rem;
   }
 }
 
@@ -83,7 +83,7 @@
   column-gap: 5rem;
   max-width: v.$small-max-width;
 
-  @include m.respond(tab-land) {
+  @include m.respond(tab-port) {
     grid-template-columns: 1fr;
   }
 }
@@ -93,8 +93,8 @@
 .section-stories {
   position: relative;
   padding: 15rem 0;
-  @include m.respond(tab-land) {
-    padding: 10rem 0;
+  @include m.respond(tab-port) {
+    padding: 5rem 0 10rem 0;
   }
 }
 
@@ -107,7 +107,7 @@
     v.$light-green,
     v.$dark-green
   );
-  @include m.respond(tab-land) {
+  @include m.respond(tab-port) {
     padding: 10rem 4rem;
   }
 }

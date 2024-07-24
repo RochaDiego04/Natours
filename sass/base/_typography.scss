@@ -61,11 +61,11 @@ body {
   transition: all 0.2s;
 
   @include m.respond(tab-port) {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   @include m.respond(phone) {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 
   &:hover {

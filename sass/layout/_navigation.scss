@@ -3,6 +3,7 @@
 
 .navigation {
   &__checkbox {
+    position: absolute; // avoid blank space at the beginning
     appearance: none;
   }
 

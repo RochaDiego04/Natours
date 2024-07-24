@@ -48,6 +48,11 @@
 
   &__list {
     list-style: none;
+    @include m.respond(tab-port) {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
