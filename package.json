@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/RochaDiego04/Natours/issues"
   },
-  "homepage": "https://github.com/RochaDiego04/Natours#readme"
+  "homepage": "https://github.com/RochaDiego04/Natours#readme",
+  "devDependencies": {
+    "sass": "^1.77.8"
+  }
 }

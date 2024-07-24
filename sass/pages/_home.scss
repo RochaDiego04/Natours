@@ -45,6 +45,11 @@
   @include m.respond(tab-land) {
     padding: 15rem 0;
   }
+
+  & > * {
+    // every child element will counter the -7 deg of the container box
+    transform: skewY(7deg);
+  }
 }
 
 .features-flex-container {
@@ -54,8 +59,6 @@
   margin: 0 auto;
   max-width: v.$medium-max-width;
   padding: 0 2.2rem;
-
-  transform: skewY(7deg);
 
   @include m.respond(tab-land) {
     flex-direction: column;

@@ -64,14 +64,14 @@
   }
 
   &:hover &__side--back {
-    transform: rotateY(0);
+    transform: rotateY(1deg);
   }
 
   // FRONT SIDE STYLING
   &__picture {
     background-size: cover;
     height: 23rem;
-    background-blend-mode: screen; /* Mix the linear gradient and the bg image */
+    background-blend-mode: screen; /* Mix the linear gradient and the bg image, blend modes are like filters */
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
@@ -115,7 +115,7 @@
 
   &__heading-span {
     padding: 1rem 1.5rem;
-    box-decoration-break: clone; /*Apply styles as if there was 2 boxes with text*/
+    box-decoration-break: clone; /*Apply styles as if there was 2 boxes with text (padding, margin, etc.)*/
     -webkit-box-decoration-break: clone;
 
     &--1 {

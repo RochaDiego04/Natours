@@ -1,55 +1,67 @@
 @keyframes moveInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-10rem);
-    }
-  
-    80% {
-      transform: translateX(1rem);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes moveInRight {
-    0% {
-      opacity: 0;
-      transform: translateX(10rem);
-    }
-  
-    80% {
-      transform: translateX(-1rem);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes moveInBottom {
-    0% {
-      opacity: 0;
-      transform: translateY(3rem);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
   }
 
-  @keyframes radioBtnScaleUpDissapear {
-    0% {
-      opacity: 0.8;
-      transform: translate(-50%, -50%) scaleX(1.4) scaleY(1.4);
-    }
-  
-    100% {
-      opacity: 0;
-      transform: translate(-50%, -50%) scaleX(1) scaleY(1);
-    }
+  80% {
+    transform: translateX(1rem);
   }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes radioBtnScaleUpDissapear {
+  0% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scaleX(1.4) scaleY(1.4);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scaleX(1) scaleY(1);
+  }
+}
+
+@keyframes navBtnScaleUpDissapear {
+  0% {
+    opacity: 0.8;
+    transform: scaleX(1) scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleX(1.8) scaleY(1.8);
+  }
+}
