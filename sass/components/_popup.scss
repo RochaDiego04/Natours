@@ -31,6 +31,12 @@
   &__left {
     width: 33.333333%;
     display: table-cell;
+    text-align: center; /* Centra horizontalmente */
+    vertical-align: middle; /* Centra verticalmente */
+    @include m.respond(tab-port) {
+      display: flex;
+      width: 50%;
+    }
   }
 
   &__right {
@@ -38,6 +44,30 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+    @include m.respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 3rem;
+      width: 100%;
+    }
+    h2 {
+      @include m.respond(tab-port) {
+        margin: 2rem 0.75rem;
+        text-align: center;
+      }
+    }
+    h2 {
+      @include m.respond(tab-port) {
+        margin: 0;
+        text-align: center;
+      }
+    }
+    a {
+      @include m.respond(tab-port) {
+        display: inline-block;
+        text-align: center;
+      }
+    }
   }
 
   &__img {
@@ -61,6 +91,11 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; /*INTERESTING: along columns, this makes the style of the text more natural*/
+    @include m.respond(phone) {
+      margin-bottom: 2rem;
+      -moz-column-count: 1; /* Ensure text goes one below the other */
+      column-count: 1; /* Ensure text goes one below the other */
+    }
   }
 
   /* OPEN STATES */

@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
 
 .form {
   &__group:not(:last-child) {
@@ -17,6 +18,10 @@
     width: 90%;
     display: block;
     transition: all 0.4s;
+
+    @include m.respond(tab-port) {
+      width: 100%;
+    }
 
     &:focus {
       outline: none;
@@ -51,6 +56,11 @@
   &__radio-group {
     width: 49%;
     display: inline-block;
+
+    @include m.respond(tab-port) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
   }
 
   &__radio-group:focus-within &__radio-button {
