@@ -188,7 +188,8 @@
   }
 
   /****** SMALL DEVICES DESIGN **/
-  @include m.respond(tab-port) {
+  @media only screen and (max-width: 52.25em), only screen and (hover: none) {
+    // we want this to happen with all touch devices
     height: auto;
     max-width: 35rem;
     border-radius: 5px;

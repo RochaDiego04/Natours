@@ -34,24 +34,25 @@ breakpoint argument choices
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
     // width < 300
-    @media (max-width: 37.5em) {
+    // only applies to screens, if someone want to print our page, this styles wont appear
+    @media only screen and (max-width: 37.5em) {
       @content;
     }
   }
   @if $breakpoint == tab-port {
     // width < 600
-    @media (max-width: 52.25em) {
+    @media only screen and (max-width: 52.25em) {
       @content;
     }
   }
   @if $breakpoint == tab-land {
     // width < 900
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       @content;
     }
   }
   @if $breakpoint == big-desktop {
-    @media (min-width: 112.5em) {
+    @media only screen and (min-width: 112.5em) {
       @content;
     }
   }
