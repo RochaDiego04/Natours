@@ -23,6 +23,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    --webkit-backface-visibility: hidden;
     backface-visibility: hidden; /* Hides the back part of an element, fix the animation bug */
     border-radius: 5px;
     overflow: hidden; /* Image don't overflow the card */
